@@ -3,8 +3,13 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    color-scheme: light only;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+    color-scheme: light;
 }
 
 /* Navbar hover effect */
