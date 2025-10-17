@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afnan H K - Portfolio</title>
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232563EB'/%3E%3Ctext x='50%' y='65%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-blue': '#87CEEB',
+                        'sky-blue': '#6EC6FF',
+                        'dark-blue': '#1A237E',
+                        'navy-blue': '#0D47A1'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-10 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-dark-blue">Afnan Hanif Khoiruddin</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 font-medium">About</a>
+                <a href="#projects" class="nav-link text-gray-700 font-medium">Projects</a>
+                <a href="#skills" class="nav-link text-gray-700 font-medium">Skills</a>
+                <a href="#contact" class="nav-link text-gray-700 font-medium">Contact</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-dark-blue">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md-hidden bg-white/90 backdrop-blur-sm shadow-lg">
+            <div class="px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="nav-link text-gray-700 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 font-medium">About</a>
+                <a href="#projects" class="nav-link text-gray-700 font-medium">Projects</a>
+                <a href="#skills" class="nav-link text-gray-700 font-medium">Skills</a>
+                <a href="#contact" class="nav-link text-gray-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-blue to-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left md:pl-16 reveal">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-dark-blue">Hi, I'm Afnan</h1>
+                <h2 class="text-2xl md:text-3xl mb-6 text-gray-700 flex items-center gap-2">
+                    SMK Harapan Bangsa School Students
+                    <a href="https://code.visualstudio.com/" target="_blank" class="flex items-center justify-center 
+                    bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full w-9 h-9 shadow-md 
+                    hover:scale-110 transition-transform duration-300" title="Visual Studio Code">
+                        <span class="text-lg font-bold">&lt;/&gt;</span>
+                    </a>
+                </h2>
+                <p class="text-lg mb-8 text-gray-600 max-w-lg">
+                    Learn to build comprehensive web applications using modern technologies.
+                    From pixel-perfect UIs to robust server architectures.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="btn-primary text-white px-6 py-3 rounded-full font-medium">View
+                        Projects</a>
+                    <a href="#contact"
+                        class="border-2 border-dark-blue text-dark-blue px-6 py-3 rounded-full font-medium hover:bg-dark-blue hover:text-white transition-all">Contact
+                        Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center reveal">
+                <div class="relative">
+                    <img src="images/profile.jpg" alt="Profile Photo"
+                        class="rounded-full w-64 h-64 object-cover border-8 border-white shadow-xl">
+
+                    <!-- ikon di pojok bawah kanan -->
+                    <a href="https://code.visualstudio.com/" target="_blank" class="absolute bottom-0 right-2 bg-gradient-to-r from-sky-500 to-blue-600 
+                    text-white rounded-full w-14 h-14 flex items-center justify-center
+                    shadow-lg hover:scale-110 transition-transform duration-300" title="Visual Studio Code">
+                        <span class="text-2xl font-bold">&lt;/&gt;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark-blue">About Me</h2>
+            <div class="max-w-3xl mx-auto reveal">
+                <p class="text-lg mb-6 text-gray-700">
+                    I am a vocational high school student at SMK Harapan Bangsa who is passionate about learning and
+                    developing skills in building web applications. Although I currently have limited programming
+                    experience,
+                    I am continuously striving to deepen my knowledge and abilities in full-stack web development.
+                </p>
+                <p class="text-lg mb-6 text-gray-700">
+                    My experience includes working with HTML, CSS, JavaScript, Node.js, Python, and MySQL, as well as a
+                    basic
+                    understanding of cloud deployment strategies. I enjoy learning how different technologies work
+                    together to
+                    create engaging and functional web applications.
+                </p>
+                <p class="text-lg mb-8 text-gray-700">
+                    I am committed to continuous learning, writing clean code, and keeping up with the latest
+                    technological
+                    trends. Every project or small experiment I create is an important step in my journey to becoming a
+                    skilled
+                    and creative web developer.
+                </p>
+                <a href="#"
+                    class="hidden btn-primary text-white px-6 py-3 rounded-full font-medium inline-flex items-center">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-sky-blue/10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark-blue">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden reveal">
+                    <img src="images/pesan.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark-blue">Discord Bot Development</h3>
+                        <p class="text-gray-600 mb-4">A custom Discord bot built using Node.js and Discord.js,
+                            designed to help with management and automation on store servers.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://discord.com/oauth2/authorize?client_id=1324372471259856916&permissions=8&scope=bot"
+                                target="_blank" class="text-dark-blue font-medium hover:text-navy-blue">View Discord
+                                Bot</a>
+                            <a href="https://github.com/AfnanHK/FlowStoreBot" target="_blank"
+                                class="text-dark-blue font-medium hover:text-navy-blue">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden reveal">
+                    <img src="images/web.png" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark-blue">Personal Portfolio Website</h3>
+                        <p class="text-gray-600 mb-4">Simple and responsive portfolio website built with HTML, CSS, and
+                            JavaScript.
+                            Showcases your projects and skills in a clean, modern design.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://afnanhk.github.io/afnan-portofolio" class="text-dark-blue font-medium hover:text-navy-blue">View Website</a>
+                            <a href="https://github.com/AfnanHK/afnan-portofolio" class="text-dark-blue font-medium hover:text-navy-blue">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden reveal">
+                    <img src="images/fivem.png" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark-blue">FiveM Learning Server</h3>
+                        <p class="text-gray-600 mb-4">FiveM server trial to learn GTA V server configuration, basic
+                            scripting,
+                            and management. Suitable for understanding resource structure and basic gameplay settings.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hidden text-dark-blue font-medium hover:text-navy-blue">View Demo</a>
+                            <a href="#" class="hidden text-dark-blue font-medium hover:text-navy-blue">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark-blue">My Experience or Skills</h2>
+
+            <!-- Frontend Skills -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-navy-blue">Frontend Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                    <!-- HTML -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-html5 text-3xl text-orange-500"></i>
+                        </div>
+                        <span class="font-medium">HTML5</span>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
+                        </div>
+                        <span class="font-medium">CSS3</span>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-js-square text-3xl text-yellow-500"></i>
+                        </div>
+                        <span class="font-medium">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-navy-blue">Backend Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                    <!-- Node.js -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-node-js text-3xl text-green-600"></i>
+                        </div>
+                        <span class="font-medium">Node.js</span>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-database text-3xl text-blue-600"></i>
+                        </div>
+                        <span class="font-medium">MySQL</span>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-python text-3xl text-blue-600"></i>
+                        </div>
+                        <span class="font-medium">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-navy-blue">DevOps & Tools</h3>
+                <div class="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                    <!-- Git -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fab fa-git-alt text-3xl text-red-500"></i>
+                        </div>
+                        <span class="font-medium">Git</span>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+
+                            <i class="fab fa-github text-3xl text-black"></i>
+                        </div>
+                        <span class="font-medium">GitHub</span>
+                    </div>
+
+                    <!-- VS Code -->
+                    <div class="flex flex-col items-center reveal">
+                        <div
+                            class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-code text-3xl text-blue-700"></i>
+                        </div>
+                        <span class="font-medium">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-media" class="py-20 bg-sky-blue/10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark-blue">My Social Media</h2>
+
+            <div class="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/afnanhk15" class="flex flex-col items-center reveal" target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <i class="fab fa-instagram text-3xl text-pink-600"></i>
+                    </div>
+                    <span class="font-medium">INSTAGRAM</span>
+                </a>
+
+                <!-- TikTok-->
+                <a href="https://www.tiktok.com/@afnanhk_" class="flex flex-col items-center reveal" target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <i class="fab fa-tiktok text-3xl text-black"></i>
+                    </div>
+                    <span class="font-medium">TIKTOK</span>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@afnanhanifk" class="flex flex-col items-center reveal"
+                    target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <i class="fab fa-youtube text-3xl text-red-600"></i>
+                    </div>
+                    <span class="font-medium">YOUTUBE</span>
+                </a>
+
+                <!-- X (Twitter) -->
+                <a href="https://twitter.com/yourusername" class="flex flex-col items-center reveal" target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <img src="images/x.png" alt="Logo X (Twitter)" class="w-8 h-8 object-contain" />
+                    </div>
+                    <span class="font-medium">X</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/AfnanHK" class="flex flex-col items-center reveal" target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <i class="fab fa-github text-3xl text-black"></i>
+                    </div>
+                    <span class="font-medium">GITHUB</span>
+                </a>
+
+                <!-- Linkedin -->
+                <a href="https://www.linkedin.com/in/afnanhk/" class="flex flex-col items-center reveal"
+                    target="_blank">
+                    <div class="skill-icon w-20 h-20 bg-sky-blue/20 rounded-full flex items-center justify-center mb-3
+                    transition-transform duration-300">
+                        <i class="fab fa-linkedin text-3xl text-blue-700"></i>
+                    </div>
+                    <span class="font-medium">LINKEDIN</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-dark-blue">Let's Connect</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="bg-sky-100 rounded-xl shadow-md p-8 reveal">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-blue">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-blue">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-blue"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary text-white px-6 py-3 rounded-full font-medium w-full">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark-blue/10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-700">© 2025 Afnan H K.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
