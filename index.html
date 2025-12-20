@@ -2,22 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta name="color-scheme" content="light only">
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="_Cgkk9VN4XfLmMHduTGMCMhIkNTO0wopUDoBfYekejY" />
-    <title>Afnan H K - Portfolio</title>
+    <meta name="color-scheme" content="light only">
 
-    <!-- Google Fonts - Poppins -->
+    <!-- SEO Meta -->
+    <title>Afnan H K | Web Developer & Frontend Portfolio</title>
+    <meta name="description"
+        content="Portofolio Afnan H K, web developer frontend yang berfokus pada HTML, CSS, JavaScript, Tailwind, dan website modern responsif." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://portoafnan.web.id/" />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="_Cgkk9VN4XfLmMHduTGMCMhIkNTO0wopUDoBfYekejY" />
+
+    <!-- Open Graph (Social Media Preview) -->
+    <meta property="og:title" content="Afnan H K | Web Developer Portfolio" />
+    <meta property="og:description" content="Lihat portofolio dan proyek website yang dibuat oleh Afnan H K." />
+    <meta property="og:url" content="https://portoafnan.web.id/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://portoafnan.web.id/images/preview.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom CSS -->
@@ -25,9 +45,48 @@
 
     <!-- Favicon -->
     <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232563EB'/%3E%3Ctext x='50%' y='65%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232563EB'/%3E%3Ctext x='50%25' y='65%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='60' font-weight='bold' fill='white'%3EA%3C/text%3E%3C/svg%3E">
 
-    <!-- Custom Tailwind Config -->
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://portoafnan.web.id/#website",
+            "name": "Portofolio Afnan",
+            "alternateName": "Afnan H K Portfolio",
+            "url": "https://portoafnan.web.id/",
+            "publisher": {
+            "@id": "https://portoafnan.web.id/#person"
+        }
+    },
+        {
+            "@type": "Person",
+            "@id": "https://portoafnan.web.id/#person",
+            "name": "Afnan H K",
+            "url": "https://portoafnan.web.id/",
+            "jobTitle": "Frontend Web Developer",
+            "knowsAbout": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Tailwind CSS"
+                ],
+            "mainEntityOfPage": {
+            "@id": "https://portoafnan.web.id/#website"
+        },
+        "sameAs": [
+        "https://github.com/USERNAME",
+        "https://linkedin.com/in/USERNAME"
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -39,7 +98,7 @@
                         'navy-blue': '#0D47A1'
                     },
                     fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-in-out',
